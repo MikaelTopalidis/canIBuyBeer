@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace öl
+namespace canIBuyBeer
 {
     class Program
     {
@@ -10,9 +10,11 @@ namespace öl
                 return false;
             if (promille > 1.0m)
                 return false;
+            if (age > 15 && location == "skola")
+                return true;
             if (age > 17 && location == "krogen")
                 return true;
-            if (location)
+            if (location == "krogen")
                 return true;
             return false;
             
@@ -22,8 +24,9 @@ namespace öl
     
         static void Main(string[] args)
         {
-            //om ålder är > 17 och location == "krogen" OCH om leg == "j" OCH om prompille < 1.0
-            // Om ålder > 19 och location == "systemet" OCH om leg == "j" OCH om prompille < 1.0
+        //om ålder är > 17 och location == "krogen" OCH om leg == "j" OCH om prompille < 1.0
+        // Om ålder > 19 och location == "systemet" OCH om leg == "j" OCH om prompille < 1.0
+        Console.WriteLine("Superduper beer calculatorr 1.0");
 
             Console.Write("Mata in din ålder: ");
             int age = Convert.ToInt32(Console.ReadLine());
@@ -38,7 +41,7 @@ namespace öl
 
             
 
-            //bool canIBuyBear = false;
+            bool canIBuyBear = false;
 
 
             //if (legg == "J" && promille < 1.0m)
@@ -80,5 +83,5 @@ namespace öl
 
 
         }
-    }
+    
 }
